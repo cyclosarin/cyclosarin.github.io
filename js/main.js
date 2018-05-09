@@ -1,28 +1,34 @@
-function initial() {
-	let username = window.location.hostname;
-	console.log(username);
-}
+// 项目入口初始化
+window.onload = initialize;
 
-window.onload = function() {
-	var links = document.querySelectorAll("a");
+// const fetch = fetch || (url) => {
+// 	return new Promise((resolve, reject) => {
+// 		let xhr = new XMLHttpRequest()
+// 		xhr.open("GET", url, true);
+// 		xhr.onreadystatechange = function() {
+// 			if (xhr.status === 200) {
+// 				resolve(xhr.response);
+// 			}
+// 			else if (xhr.status >= 400) {
+// 				reject(xhr)
+// 			}
+// 		}
+// 	})
+// }
 
-	links.forEach(a => {
-		a.addEventListener("contextmenu", handler);
+function initialize() {
+	// 通过域名信息获取用户名，根据gihub's pages的一些规则，二级域名是Github用户名
+	// eg: https://abc.github.io => abc
+	let githubUsername = window.location.hostname.split(".")[0];
+
+	// 通过接口抓取用户信息
+	// 这里要使用第三方js库
+
+	fetch("https://api.github.com").then((response) => {
+		if (response.status === 200) {
+			return response.json();
+		}
+	}).then(data => {
+		console.log(data);
 	});
-
-	function handler(e) {
-		return e.preventDefault();
-	}
-
-	initial();
-
-	function github(username) {
-		fetch("https://api.github.com/users/" + username).then((response) => {
-			if (response.status === 200) {
-				console.log(response);
-			}
-		})
-	}
-
-	github("cyclosarin")
 }

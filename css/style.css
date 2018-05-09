@@ -1,27 +1,29 @@
 body, html{
 	margin: 0;
 	padding: 0;
-	background: #ffffff;
+	background: #111111;
 	user-select: none;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
-.footer {
+.main {
 	font-family: 'Stylish', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-size: 12px;
+	font-size: 14px;
 	color: #999;
 	font-weight: bold;
 }
-.footer a {
+.main a {
 	color: inherit;
 	text-decoration: none;
 	color: #666;
+	transition: color .2s;
 }
-.footer a:hover {
+.main a:hover {
 	text-decoration: underline;
-	color: #111;
+	color: #ffffff;
+	transition: color .2s;
 }
