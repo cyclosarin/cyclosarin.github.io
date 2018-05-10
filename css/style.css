@@ -1,29 +1,55 @@
 body, html{
 	margin: 0;
 	padding: 0;
-	background: #111111;
 	user-select: none;
 	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-family: 'Averia Sans Libre', cursive;
 }
+h1, h2, h3, h4, h5, p {
+	margin: 0;
+}
+
 .main {
-	font-family: 'Stylish', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-size: 14px;
-	color: #999;
-	font-weight: bold;
+	font-size: 24px;
 }
-.main a {
+.main h1 {
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+.main .nav-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+.main .nav-list > li {
+	padding: 0 1rem;
+}
+
+.main .nav-list a {
 	color: inherit;
 	text-decoration: none;
-	color: #666;
+	color: rgb(238, 56, 56);
 	transition: color .2s;
 }
-.main a:hover {
+.main .nav-list a:hover {
 	text-decoration: underline;
-	color: #ffffff;
+	color: rgb(238, 205, 56);
 	transition: color .2s;
+}
+.main .footer > p {
+	text-align: center;
+	display: block;
+	margin-top: 2.5rem;
+	font-size: 14px;
+	color: rgb(163, 141, 141);
+}
+.main .footer > p > a {
+	color: inherit;
 }
