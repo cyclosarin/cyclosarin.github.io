@@ -13,7 +13,7 @@ body, html{
 }
 
 body {
-	background-image: url("../images/bg.jpg");
+	background-image: url("//cyclosarin.com/images/bg.jpg");
 	background-size: 100% auto;
 	color: white;
 	text-shadow: 0 0 1.625rem rgb(206, 235, 255);
